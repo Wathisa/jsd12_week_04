@@ -1,0 +1,39 @@
+/* p {
+  color: blueviolet;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(251, 223, 186);
+  font-weight: bold;
+} */
+
+/* .tiktok-text {
+  margin: 60px;
+  font-size: 300px;
+  font-weight: bold;
+  color: black;
+
+  text-shadow:
+    -6px -6px 0 #25f4ee,
+    6px 6px 0 #ff2d88;
+} */
+
+.tiktok-text {
+  display: flex;
+  justify-content: center; /* ข้อความด้านในอยู่ตรงกลางในแนวนอน */
+  align-items: center; /* ข้อความด้านในอยู่ตรงกลางในแนวตั้ง */
+
+  width: 300px; /* สร้างกล่องขนาด 300x300 px */
+  height: 300px;
+
+  margin: 60px auto; /* 60 px คือระยะห่างภายนอกจากด้านบนและล่าง auto คือ ซ้ายขวาห่างเท่ากัน คืออยู่กลางหน้าจอ */
+  border-radius: 50%; /* ปรับมุมโค้งของกล่องให้เป็นวงกลม */
+
+  background-color: #000; /* สีพื้นหลังของกล่อง */
+  color: white; /* สีเนื้อหาด้านใน */
+
+  font-size: 300px;
+  font-weight: bold;
+
+  text-shadow: /*เงา2สี*/
+    -6px -6px 0 #25f4ee,
+    6px 6px 0 #ff2d88;
+}
