@@ -1,0 +1,233 @@
+/* ล้างค่าเริ่มต้น */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* กำหนดตัวแปรสีทั้งหมด */
+:root {
+  --color-bg: #f0dec1; /* สีครีมอ่อน - พื้นหลังหลัก */
+  --color-text: #62695e; /* สีเทาเข้ม - ตัวหนังสือทั่วไป */
+  --color-logo: #29684d; /* สีเขียวเข้ม - โลโก้และหัวข้อหลัก */
+  --color-accent: #72ad77; /* สีเขียวมัทฉะ - สีเน้น */
+  --color-highlight: #a27b5c; /* สีน้ำตาลคาราเมล - ไฮไลท์ */
+}
+
+body {
+  font-family: "Prompt", sans-serif; /* ฟอนต์ภาษาไทยหลัก */
+  background-color: var(--color-bg); /* ใช้ตัวแปรสีพื้นหลัง */
+  color: var(--color-text); /* ใช้ตัวแปรสีตัวหนังสือ */
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* สั่งให้โลโก้อยู่ซ้ายสุด และเมนูอยู่ขวาสุด */
+  align-items: center;
+  padding: 2rem 10%;
+}
+
+.logo {
+  font-family: "Ubuntu Sans", serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: var(--color-logo);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 40px;
+  position: relative; /* สำหรับ Dropdown */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 300;
+  transition: 0.3s;
+}
+
+/* เปลี่ยนสีตอนชี้ที่เมนูหลัก */
+.nav-links a:hover {
+  color: var(--color-accent);
+}
+
+/* --- จัดการ Dropdown --- */
+.dropdown-content {
+  display: none; /* ซ่อน dropdown ไว้ก่อน */
+  position: absolute; /* สั่งให้ลอยตัวออกจากแถวปกติไม่ให้ไปเบียดเมนูอื่น */
+  top: 100%; /* แสดงใต้เมนูหลักพอดี */
+  left: 0; /* ให้ขอบซ้ายตรงกับเมนูหลัก */
+  background-color: white; /* พื้นหลังเมนูย่อยเป็นสีขาว */
+  min-width: 160px; /* กำหนดความกว้างขั้นต่ำของกล่อง */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* ใส่เงาจางๆ */
+  z-index: 1; /* สั่งให้อยู่ชั้นบนสุดเพื่อไม่ให้รูปภาพหรือเนื้อหาอื่นมาทับเมนู */
+}
+
+/* จัดรูปแบบลิงก์ในเมนูย่อย */
+.dropdown-content a {
+  color: var(--color-text);
+  padding: 12px 16px; /* เพิ่มพื้นที่ว่างรอบๆตัวอักษร */
+  text-decoration: none; /* ลบเส้นใต้ของลิงก์ออก */
+  display: block; /* เปลี่ยนจากตัวอักษรปกติให้เป็นกล่องเต็มบรรทัด ทำให้เราเอาเมาส์จิ้มตรงไหนของแถวนั้นก็ได้ */
+  font-size: 0.9rem; /* ปรับขนาดให้เล็กกว่าเมนูหลักนิดนึง */
+  transition: background-color 0.3s; /* สั่งให้ตอนเปลี่ยนสีพื้นหลังมีความนุ่มนวล */
+}
+
+/* พื้นหลังเปลี่ยนสีตอนชี้ที่ลิงก์ในเมนูย่อย */
+.dropdown-content a:hover {
+  background-color: var(--color-bg);
+  color: var(--color-logo);
+}
+
+/* สั่งให้ Dropdown แสดงออกมาตอนชี้ที่ .dropdown */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Hero Section */
+.hero {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  /* ให้ข้อความทั้งหมดมาอยู่กึ่งกลางของหน้าจอ ทั้งแนวตั้งและแนวนอน */
+  justify-content: center;
+  text-align: center;
+  /* ภาพ bg ใหญ่กลางหน้าเพจ */
+  /* linear-gradient ใส่ฟิลเตอร์สีครีมโปร่งแสง (Opacity 0.7) ทับลงบนรูปภาพ */
+  background:
+    linear-gradient(rgba(252, 250, 245, 0.7), rgba(252, 250, 245, 0.7)),
+    url("/my_business/html/images/head-image.jpg") no-repeat center/cover;
+}
+
+.hero h1 {
+  font-family: "Ubuntu Sans", serif;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: var(--color-logo);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+  color: var(--color-text);
+}
+
+/* ปุ่ม Menu */
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border: 1px solid var(--color-logo);
+  text-decoration: none;
+  color: var(--color-logo);
+  transition: all 0.3s; /* เวลา Hover ที่ปุ่มหรือเมนู สีจะค่อยๆเปลี่ยน */
+}
+
+.btn:hover {
+  background-color: var(--color-logo); /* พื้นหลังปุ่มตอนชี้เป็นสีเขียวเข้ม */
+  color: var(--color-bg); /* ตัวหนังสือปุ่มตอนชี้เป็นสีครีม */
+}
+
+/* --- โครงสร้างหลัก Footer --- */
+.footer-wrapper {
+  background-color: #f4eedc; /* สีพื้นหลังเดิม */
+  color: #1a4d2e; /* สีข้อความเขียวมัทฉะ */
+  font-family: "sans-serif";
+}
+
+/* --- โครงสร้างหลัก Footer --- */
+.footer-wrapper {
+  background-color: #f4eedc; /* สีพื้นหลังเดิม */
+  color: #1a4d2e; /* สีข้อความเขียวมัทฉะ */
+  font-family: "sans-serif";
+}
+
+/* --- จัดเลย์เอาต์ 3 กล่อง --- */
+.footer-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  display: grid;
+  /* คำสั่งนี้แบ่งพื้นที่เป็น 3 ช่องเท่าๆ กัน (ซ้าย-กลาง-ขวา) */
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center; /* ให้อยู่กึ่งกลางในแนวตั้ง */
+}
+
+/* 1. ด้านซ้าย (ชื่อร้าน) */
+.footer-brand {
+  text-align: left; /* ชิดซ้าย */
+}
+.footer-brand h2 {
+  font-size: 1.8rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+/* 2. ตรงกลาง (ข้อมูลร้าน) */
+.footer-info {
+  text-align: center; /* ให้อยู่ตรงกลางช่อง */
+}
+.footer-info p {
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+/* 3. ด้านขวา (โซเชียล) */
+.footer-social {
+  display: flex;
+  justify-content: flex-end; /* ดันกลุ่มไอคอนให้ไปชิดขวาสุด */
+}
+.social-icons {
+  display: flex;
+  gap: 25px; /* ระยะห่างระหว่างไอคอนแต่ละตัว (บรรทัดเดียวกัน) */
+}
+.social-icons a {
+  color: #1a4d2e;
+  font-size: 1.5rem; /* ขนาดของไอคอน */
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* ลูกเล่น Hover สไตล์มินิมอล (เมาส์ชี้แล้วไอคอนจะสว่างขึ้นและขยับขึ้นนิดนึง) */
+.social-icons a:hover {
+  opacity: 0.6;
+  transform: translateY(-3px);
+}
+
+/* --- ส่วนล่างสุด (Copyright) แยกสีพื้นหลัง --- */
+.footer-bottom {
+  /* ทำให้สีเข้มขึ้นจากพื้นหลังหลักนิดหน่อย เช่น สีครีมเข้มขึ้น */
+  background-color: #e6dec8;
+  padding: 15px 20px;
+  text-align: center;
+}
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+/* --- การแสดงผลบนมือถือ --- */
+/* @media (max-width: 768px) {
+  .footer-main { */
+/* ถ้าจอมือถือ ให้หดเหลือ 1 คอลัมน์ (เรียงลงมาเป็นแนวตั้งแทน) */
+/* grid-template-columns: 1fr; 
+    gap: 30px;
+  }
+  .footer-brand, .footer-info {
+    text-align: center; จัดทุกอย่างให้อยู่ตรงกลางบนมือถือ */
+/* }
+  .footer-social {
+    justify-content: center; ดันไอคอนมาอยู่ตรงกลาง */
+/* }
+} */
