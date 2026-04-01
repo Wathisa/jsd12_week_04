@@ -4,14 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Matcha Mood Cafe</title>
-    <!-- Google Font -->
+
+    <!-- ===== GOOGLE FONT ===== -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="/css/style.css" />
+
     <!-- Icon ตรง Footer -->
     <link
       rel="stylesheet"
@@ -20,60 +23,135 @@
   </head>
 
   <body>
-    <!-- สร้างแถบ Menu bar ด้านบน -->
-    <header>
-      <nav class="navbar">
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+      <div class="container navbar">
         <div class="logo">Matcha Mood</div>
+
         <ul class="nav-links">
           <li><a href="#">Home</a></li>
+
           <li class="dropdown">
             <a href="#">Menu ▾</a>
-            <!-- ทำ dropdown menu -->
+
             <div class="dropdown-content">
               <a href="#">Hot Drinks</a>
               <a href="#">Cold Drinks</a>
               <a href="#">Desserts</a>
             </div>
           </li>
+
           <li><a href="#">About</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
-      </nav>
+      </div>
     </header>
 
-    <!-- ส่วนของเนื้อหาหลัก และภาพใหญ่ -->
+    <!-- ===== HERO ===== -->
     <section class="hero">
-      <div class="hero-content">
-        <h1>Matcha Mood Cafe</h1>
-        <p>ความละมุนของมัทฉะแท้ ในบรรยากาศมินิมอลสไตล์เกาหลี</p>
-        <a href="#" class="btn">Explore Menu</a>
+      <!-- overlay -->
+      <div class="hero-overlay"></div>
+
+      <!-- content -->
+      <div class="container hero-content">
+        <h1 class="hero-title">Matcha Mood Cafe</h1>
+
+        <p class="hero-subtitle">
+          ความละมุนของมัทฉะแท้ ในบรรยากาศมินิมอลสไตล์เกาหลี
+        </p>
+
+        <a href="#" class="hero-btn">Explore Menu</a>
       </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="footer-wrapper">
-      <div class="footer-main">
-        <div class="footer-brand">
-          <h2>Matcha Mood.</h2>
+    <!-- ===== MENU ===== -->
+    <section class="menu">
+      <div class="container">
+        <h2 class="section-title">Signature Menu</h2>
+
+        <div class="grid">
+          <div class="card">
+            <img src="images/matcha-latte.png" alt="Matcha Latte" />
+            <h3>Matcha Latte</h3>
+            <p>มัทฉะเข้มข้น หอมละมุน</p>
+          </div>
+
+          <div class="card">
+            <img src="images/matcha-dessert.png" alt="Matcha Cake" />
+            <h3>Matcha Cheesecake</h3>
+            <p>ชีสเค้กนุ่มละมุน รสมัทฉะแท้</p>
+          </div>
+
+          <div class="card">
+            <img src="images/strawberry-matcha.png" alt="Matcha Ice Cream" />
+            <h3>Strawberry Matcha Latte</h3>
+            <p>หวานหอม ลงตัว</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WHY ===== -->
+    <section class="why">
+      <div class="container">
+        <h2 class="section-title">Why Matcha Mood?</h2>
+
+        <div class="grid">
+          <div class="card">
+            <h3>🍃 Premium Matcha</h3>
+            <p>นำเข้าจากญี่ปุ่นแท้ คุณภาพระดับพรีเมียม</p>
+          </div>
+
+          <div class="card">
+            <h3>🏡 Cozy Atmosphere</h3>
+            <p>บรรยากาศอบอุ่น สไตล์มินิมอลเกาหลี</p>
+          </div>
+
+          <div class="card">
+            <h3>💚 Fresh Everyday</h3>
+            <p>ชงสดทุกแก้ว เพื่อรสชาติที่ดีที่สุด</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="container footer-content">
+        <!-- LEFT -->
+        <div class="footer-section">
+          <h3 class="logo">Matcha Mood</h3>
+          <p>คาเฟ่มัทฉะสไตล์มินิมอล<br />ให้คุณได้พักผ่อนในทุกวัน</p>
         </div>
 
-        <div class="footer-info">
-          <p>
-            Authentic Matcha & Minimalist Cafe<br />Open Daily: 09:00 - 18:00
-          </p>
+        <!-- MIDDLE -->
+        <div class="footer-section">
+          <h4>Menu</h4>
+          <ul>
+            <li><a href="#">Matcha Latte</a></li>
+            <li><a href="#">Matcha Cake</a></li>
+            <li><a href="#">Ice Cream</a></li>
+          </ul>
         </div>
 
-        <div class="footer-social">
+        <!-- RIGHT -->
+        <div class="footer-section">
+          <h4>Contact</h4>
+
+          <p>📍 Bangkok, Thailand</p>
+          <p>⏰ 09:00 - 18:00</p>
+
           <div class="social-icons">
-            <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-line"></i></a>
           </div>
         </div>
       </div>
 
+      <!-- COPYRIGHT -->
       <div class="footer-bottom">
-        <p>&copy; 2026 Matcha Mood Cafe. All rights reserved.</p>
+        <p>© 2026 Matcha Mood Cafe. All rights reserved.</p>
       </div>
     </footer>
   </body>
