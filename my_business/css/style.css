@@ -102,14 +102,14 @@ body {
   position: relative;
   height: calc(100vh - 80px);
 
-  background: url("/html/images/cafe-hero.png") center/cover no-repeat;
+  background: url("/images/cafe-hero.png") center/cover no-repeat;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
 
-  background: rgba(255, 253, 246, 0.55);
+  background: rgba(255, 253, 246, 0.6);
 }
 
 .hero-content {
