@@ -545,7 +545,7 @@ input[name="product-tabs"] {
   opacity: 0.6;
 }
 
-/* ==== MOBILE ==== */
+/* ==== MOBILE & TABLET==== */
 @media (max-width: 768px) {
   .navbar {
     padding: 15px 5%;
@@ -640,7 +640,7 @@ input[name="product-tabs"] {
     height: 22px;
   }
   .why-title {
-    font-size: 0.65rem;
+    font-size: 0.7rem;
     letter-spacing: 0.5px;
     margin-bottom: 8px;
     word-wrap: break-word;
@@ -648,7 +648,7 @@ input[name="product-tabs"] {
   }
 
   .why-desc {
-    font-size: 0.7rem;
+    font-size: 0.85rem;
     line-height: 1.2;
   }
 
@@ -685,5 +685,104 @@ input[name="product-tabs"] {
 
   .footer-links a {
     font-size: 0.85rem;
+  }
+}
+
+/* ==== มือถือจอเล็กจิ๋ว ==== */
+@media (max-width: 400px) {
+  .hero-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    letter-spacing: -0.8px;
+    color: var(--color-text);
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 35px;
+    color: var(--color-text);
+  }
+
+  .btn {
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 0.8rem;
+  }
+
+  .philosophy-quote {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+  }
+  .section-desc {
+    font-size: 0.8rem;
+  }
+
+  .why-us-section {
+    padding: 30px 5%;
+  }
+
+  .why-title {
+    font-size: 0.6rem;
+  }
+
+  .why-desc {
+    font-size: 0.65rem;
+    line-height: 1.3;
+  }
+  .collection-section {
+    padding: 40px 5%;
+  }
+  .tabs-nav {
+    gap: 15px;
+  }
+  .tab-label {
+    font-size: 0.85rem;
+  }
+  #tab-bestsellers:checked ~ #content-bestsellers .product-grid,
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .product-name {
+    font-size: 0.8rem;
+  }
+
+  .product-price {
+    font-size: 0.8rem;
+  }
+
+  .more-link {
+    font-size: 0.7rem;
+    font-weight: 500;
+  }
+  .site-footer {
+    padding: 30px 5% 30px;
+  }
+  .footer-container {
+    margin-bottom: 20px;
+    gap: 20px 10px;
+  }
+  .footer-heading {
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+  }
+  .newsletter-heading {
+    font-size: 1.1rem;
+  }
+  .newsletter-desc {
+    font-size: 0.9rem;
+  }
+
+  .newsletter-form {
+    max-width: 360px;
+  }
+
+  .footer-links a {
+    font-size: 0.75rem;
   }
 }
