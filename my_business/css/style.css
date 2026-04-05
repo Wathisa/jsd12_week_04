@@ -612,9 +612,13 @@ input[name="product-tabs"] {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0;
+    border-top: none;
+    border-bottom: none;
   }
   .why-item {
-    padding: 40px 15px;
+    padding: 30px 8px;
+    text-align: center;
+    border: none;
   }
   .why-item:not(:last-child)::after {
     display: none;
@@ -627,8 +631,25 @@ input[name="product-tabs"] {
   .why-item:nth-child(odd) {
     border-right: 1px solid rgba(74, 68, 63, 0.08);
   }
+
+  .why-icon {
+    margin-bottom: 12px;
+  }
+  .why-icon svg {
+    width: 22px;
+    height: 22px;
+  }
   .why-title {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .why-desc {
+    font-size: 0.8rem;
+    line-height: 1.4;
   }
 
   .site-footer {
